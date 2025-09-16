@@ -1,7 +1,6 @@
-
-
 body {
-
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(240, 240, 240);
 }
 
@@ -9,18 +8,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 1rem;
 }
 
 h1 {
-    font-size: 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px 0;
 }
 
 input {
-    width: 30%;
+    width: 90%;
+    max-width: 500px;
     height: 3rem;
     border: none;
     border-radius: 5px;
@@ -28,40 +28,39 @@ input {
     font-size: 1.2rem;
     background-color: #6665604f;
     color: #000000;
-}
-
-h1 {
-    text-align: center;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 50px 0;
+    box-sizing: border-box;
 }
 
 .dogs {
     max-width: 1300px;
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     justify-content: center;
-    gap: 10px;
-    
+    gap: 20px;
 }
 
 img {
     width: 250px;
     height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border-radius: 10px;
-    margin-left: 5px;
-    padding-top: 5px;
 }
+
 .grid-item {
     width: 260px;
     height: 260px;
     background: #333;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .dogs {
+        max-width: 0px;
+    }
 }
